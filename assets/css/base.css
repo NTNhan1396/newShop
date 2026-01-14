@@ -29,3 +29,14 @@ html {
   display: flex;
   flex-wrap: wrap;
 }
+
+/* animation qr-code */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

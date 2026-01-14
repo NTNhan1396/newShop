@@ -20,6 +20,11 @@
   min-height: 16px;
 }
 
+.header__navbar-item--has-qr:hover .header__qr {
+  /* Khi hover vào sẽ nhận toàn bộ css sang header__qr */
+  display: block;
+}
+
 .header__navbar-item,
 .header__navbar-item-link {
   display: inline-block;
@@ -69,4 +74,49 @@
   top: 50%;
   right: -9px;
   transform: translateY(-50%);
+}
+
+/* <===== Header qr code =====> */
+
+.header__qr {
+  color: var(--white-color);
+  width: 186px;
+  position: absolute;
+  left: 0;
+  top: 117%;
+  padding: 8px;
+
+  display: none;
+  animation: fadeIn ease-in 0.5s;
+}
+
+.header__qr::before {
+  position: absolute;
+  width: 100%;
+  height: 20px;
+  left: 0px;
+  top: -14px;
+  content: "";
+  display: block;
+}
+
+.header__qr-img {
+  width: 100%;
+  border-radius: 2px;
+}
+
+.header__qr-link:first-child {
+  margin-left: 11px;
+}
+
+.header__qr-link:last-child {
+  margin-right: 11px;
+}
+.header__qr-apps {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__qr-apps-dowload {
+  height: 16px;
 }

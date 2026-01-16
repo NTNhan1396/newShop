@@ -24,7 +24,9 @@
   /* Khi hover vào sẽ nhận toàn bộ css sang header__qr */
   display: block;
 }
-
+.header__navbar-item--has-noti:hover .header__notify {
+  display: block;
+}
 .header__navbar-item,
 .header__navbar-item-link {
   display: inline-block;
@@ -130,6 +132,10 @@
   background-color: var(--white-color);
   border: 1px solid #d3d3d3;
   margin-top: 10px;
+  cursor: default;
+  display: none;
+  transform-origin: calc(100% - 20px) top;
+  animation: HeaderNotiGrowth ease-in 0.2s;
 }
 
 .header__notify-header {
@@ -137,15 +143,18 @@
 }
 
 .header__notify-header h3 {
-  color: #d3d3d3;
+  color: #999;
   font-size: 1.4rem;
   margin: 0 0 0 12px;
   font-weight: 400;
   line-height: 40px;
+  user-select: none;
 }
+
 .header__notify-list {
   padding-left: 0;
 }
+
 .header__notify-item {
   display: flex;
 }
@@ -179,6 +188,7 @@
   display: block;
   font-size: 1.4rem;
   font-weight: 400;
+  line-height: 1.8rem;
 }
 
 .header__notify-description {
@@ -186,16 +196,19 @@
   display: block;
   font-size: 1.2rem;
   line-height: 2.5rem;
+  margin-top: 4px;
 }
 
 .header__notify-footer {
-  padding: 10px;
-  text-align: center;
-  margin-top: 6px;
+  display: flex;
 }
 
 .header__notify-footer-btn {
   text-decoration: none;
   color: var(--black-color);
-  font-size: 1.6rem;
+  width: 100%;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 400;
+  padding: 10px 48px;
 }

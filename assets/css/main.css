@@ -135,9 +135,32 @@
   cursor: default;
   display: none;
   transform-origin: calc(100% - 20px) top;
+  /* Nói cho trình duyệt biết để tối ưu sài animation */
+  will-change: opacity, transform;
   animation: HeaderNotiGrowth ease-in 0.2s;
 }
 
+/* Tạo tam giác chỉa đến phần thông báo */
+.header__notify::before {
+  content: "";
+  border-width: 20px 26px;
+  border-style: solid;
+  position: absolute;
+  border-color: transparent transparent var(--white-color) transparent;
+  right: 6px;
+  top: -34px;
+}
+
+.header__notify::after {
+  content: "";
+  width: 120px;
+  height: 20px;
+
+  position: absolute;
+  display: block;
+  right: 0;
+  top: -19px;
+}
 .header__notify-header {
   height: 40px;
 }

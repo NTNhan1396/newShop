@@ -54,3 +54,33 @@ html {
     opacity: 1;
   }
 }
+
+/* =========== Modal: tạo phần đăng ký ==============*/
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+}
+
+/* Tạo phần mờ xung quanh khi bấm vào đăng ký */
+.modal__overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal__body {
+  width: 300px;
+  height: 300px;
+  background-color: var(--white-color);
+  margin: auto;
+  position: relative;
+  /* Thuộc tính z-index sẽ qyết định thg nào nằm trên gần với mắt nhất
+   */
+  z-index: 1;
+  border-radius: 5px;
+}

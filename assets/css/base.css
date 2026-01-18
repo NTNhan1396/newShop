@@ -4,6 +4,7 @@
   --white-color: white;
   --black-color: black;
   --text-color: #333;
+  --border-color: #dbdbdb;
 }
 
 * {
@@ -74,13 +75,55 @@ html {
 }
 
 .modal__body {
-  width: 300px;
-  height: 300px;
-  background-color: var(--white-color);
   margin: auto;
   position: relative;
   /* Thuộc tính z-index sẽ qyết định thg nào nằm trên gần với mắt nhất
    */
   z-index: 1;
-  border-radius: 5px;
+}
+
+/* button */
+.btn {
+  width: 140px;
+  height: 32px;
+  background-color: var(--white-color);
+  border: none;
+  border-radius: 2px;
+  font-size: 1.5rem;
+  padding: 0 12px;
+  outline: none;
+  cursor: pointer;
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn.btn--size-s {
+  height: 32px;
+  font-size: 1.2rem;
+  padding: 0 8px;
+}
+.btn.btn--normal:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.btn.btn--primary {
+  color: var(--white-color);
+  background-color: var(--primary-color);
+}
+
+/* Vô hiệu hóa nút */
+.btn.btn--disabled {
+  color: #949494;
+  cursor: default;
+  background-color: #c3c3c3;
+}
+
+.auth-form__socials--facebook,
+.auth-form__socials--google {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
 }

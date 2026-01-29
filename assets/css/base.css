@@ -5,6 +5,12 @@
   --black-color: black;
   --text-color: #333;
   --border-color: #dbdbdb;
+
+  --header-height: 120px;
+  --navbar-height: 34px;
+  --header-with-search-height: calc(
+    var(--header-height) - var(--navbar-height)
+  );
 }
 
 * {
@@ -33,6 +39,7 @@ html {
   flex-wrap: wrap;
 }
 
+/* ========= Animation ========= */
 /* animation qr-code */
 @keyframes fadeIn {
   from {
@@ -56,6 +63,15 @@ html {
   }
 }
 
+@keyframes growth {
+  from {
+    transform: scale(var(--growth-form));
+  }
+
+  to {
+    transform: scale(var(--growth-to));
+  }
+}
 /* =========== Modal: tạo phần đăng ký ==============*/
 .modal {
   position: fixed;
@@ -64,6 +80,7 @@ html {
   bottom: 0;
   left: 0;
   display: flex;
+  animation: fadeIn linear 0.1s;
 }
 
 /* Tạo phần mờ xung quanh khi bấm vào đăng ký */
@@ -75,11 +92,14 @@ html {
 }
 
 .modal__body {
+  --growth-form: 0.7;
+  --growth-to: 1;
   margin: auto;
   position: relative;
   /* Thuộc tính z-index sẽ qyết định thg nào nằm trên gần với mắt nhất
    */
   z-index: 1;
+  animation: growth linear 0.1s;
 }
 
 /* button */
